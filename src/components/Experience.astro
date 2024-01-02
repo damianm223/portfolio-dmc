@@ -1,0 +1,50 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCIES = [
+    {
+        title: "Senior Business Intelligence Consultant",
+        description: [
+            '𝗕𝘂𝘀𝗶𝗻𝗲𝘀𝘀 𝗜𝗻𝘁𝗲𝗹𝗹𝗶𝗴𝗲𝗻𝗰𝗲 𝗖𝗼𝗻𝘀𝘂𝗹𝘁𝗮𝗻𝘁 en proyectos internos.',
+            'Procesamiento de datos con tecnología 𝐎𝐫𝐚𝐜𝐥𝐞 𝐒𝐪𝐥 y creación de procesos con 𝐏𝐋/𝐒𝐐𝐋.',
+            'Creación de Objetos en 𝐌𝐢𝐜𝐫𝐨𝐬𝐭𝐫𝐚𝐭𝐞𝐠𝐲 para la explotación y visualización de datos.',
+            'Uso de 𝐒𝐲𝐬𝐭𝐞𝐦 𝐌𝐚𝐧𝐚𝐠𝐞𝐫 𝐌𝐢𝐜𝐫𝐨𝐬𝐭𝐫𝐚𝐭𝐞𝐠𝐲 para flujos de trabajo y manejo de permisos de usuarios.',
+            'Uso de herramientas como 𝗠𝗶𝗰𝗿𝗼𝘀𝗼𝗳𝘁 𝗘𝘅𝗰𝗲𝗹 y 𝐉𝐈𝐑𝐀 para la organización de las tareas.',
+            'Organización de trabajo con metodología 𝗔𝗴𝗶𝗹𝗲.'
+        ],
+        link: "",
+        date: "Enero 2023 - Actualmente",
+        company: "Minsait",
+        skills: ['PLSQL ·', 'JIRA ·', 'Microsoft Excel ·', 'Microstrategy ·', 'Oracle SQL Developer'],
+        site: "Almería, Andalucía, España · En remoto"
+    },
+    {
+        title: "Business Intelligence Consultant",
+        description: [
+            '𝗕𝘂𝘀𝗶𝗻𝗲𝘀𝘀 𝗜𝗻𝘁𝗲𝗹𝗹𝗶𝗴𝗲𝗻𝗰𝗲 𝗖𝗼𝗻𝘀𝘂𝗹𝘁𝗮𝗻𝘁 en el sector de la energía( 𝗡𝗮𝘁𝘂𝗿𝗴𝘆 ).',
+            'Uso de herramientas 𝗘𝗧𝗟 como 𝗢𝗗𝗜 (Oracle Data Integrator) para la ingesta y transformación de datos para su visualización.',
+            'Uso de herramientas de bases de datos como 𝗢𝗿𝗮𝗰𝗹𝗲 𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲.',
+            'Uso de herramientas como 𝗠𝗶𝗰𝗿𝗼𝘀𝗼𝗳𝘁 𝗘𝘅𝗰𝗲𝗹 y 𝗧𝗿𝗲𝗹𝗹𝗼 para la organización de las tareas.',
+            'Organización de trabajo con metodología 𝗔𝗴𝗶𝗹𝗲.'
+        ],
+        link: "",
+        date: "Noviembre 2020 - Diciembre 2022 · 2 año 1 mes",
+        company: "ViewNext",
+        skills: ['Python ·', 'Power BI ·', 'Microsoft Excel ·', 'Programación ·', 'MicroStrategy ·',  'SQL ·', 'PL/SQL'],
+        site: "Almería, Andalucía, España"
+    }
+]
+
+---
+
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+      EXPERIENCIES.map((experiencie) => (
+        <li class="mb-10 ms-4">
+          <ExperienceItem {...experiencie} />
+        </li>
+      ))
+    }
+  </ol>
+

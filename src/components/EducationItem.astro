@@ -1,0 +1,46 @@
+---
+interface Props {
+    institution: string;
+    degree:      string;
+    dates:       string;
+    grade:       string;
+    description: string;
+    skills:      string[];
+}
+const { institution, description, degree, dates, skills, grade } = Astro.props;
+---
+
+<div
+  class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"
+>
+</div>
+<time
+  class="mb-1 text-sm font-normal leading-none text-sky-400 dark:text-sky-200/80"
+  >{dates}</time
+>
+<h3 class="text-lg font-semibold text-yellow-200 mt-2">
+  {degree}
+</h3>
+<div >&nbsp;<small class="underline">{institution}</small></div>
+<p class="mb-4 text-base font-normal dark:text-gray-200 text-pretty">
+    {description}
+</p>
+  
+  
+
+<p class="mb-4  font-normal text-pretty">
+  {grade}
+</p>
+
+<small class={`
+    bg-white/10 
+      border  border-gray-400 rounded-full
+      flex justify-center items-center gap-x-2
+      py-1 px-2 md:py-2 md:px-4
+       dark:text-white/50
+    `}>
+    {skills.map((sk: string, index: number) => (
+        <span> {sk} </span>
+      ))}
+    
+    </small>

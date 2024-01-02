@@ -1,0 +1,28 @@
+---
+import EducationItem from "./EducationItem.astro";
+
+const EDUCATION = [
+    {
+        institution: "I.E.S Aguadulce",
+        degree: "Ciclo Desarrollo de Aplicaciones Web, Programación informática",
+        dates: "2018 - 2020",
+        grade: "Titulación: 8.33",
+        description: "Ciclo donde he aprendido diversos conocimientos sobre distintos lenguajes de programación como son JAVA, JavaScript, PHP, JQuery y PL/SQL, como tratamiento de bases de datos he aprendido a dominar a la perfección MySQL y CMS como Bootstrap.",
+        skills: ["Programación", "Diseño de bases de datos"]
+    }
+]
+
+
+---
+
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+      EDUCATION.map((ed) => (
+        <li class="mb-10 ms-4">
+          <EducationItem {...ed} />
+        </li>
+      ))
+    }
+  </ol>
+

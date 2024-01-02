@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import ExperienceIcon from "../components/icons/ExperienceIcon.astro";
+import Education from "../components/Education.astro";
+import EducationIcon from "../components/icons/EducationIcon.astro";
+import PhoneIcon from "../components/icons/PhoneIcon.astro";
+import ContactForm from "../components/ContactForm.astro";
+---
+
+<Layout
+  title="Portfolio de damian Martinez - Desarrollador y Data Analyst"
+  description="Analista y programador apasionado por el mundo de la informatica. En busca de nuevas oportundiades"
+>
+  <main>
+    <SectionContainer class="py-44 pb-22">
+      <img
+        class="rounded-full size-24 mb-4"
+        src="https://media.licdn.com/dms/image/C4E03AQEMQ7IPeZ0abA/profile-displayphoto-shrink_200_200/0/1662201333766?e=1709769600&v=beta&t=T4_duV1a8bu8quBa8MUkuFwi2j9bsDl30B3ZdIm4hms"
+        alt="Foto damian martinez cintas"
+      />
+      <h1
+      class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+    >
+        Hey, soy Damián <a
+          class="flex justify-center items-center"
+          href="https://www.linkedin.com/in/damian-martinez-cintas-1769bb198/"
+          target="_blank"
+          rel="noopener"
+        >
+          <Badge>En busqueda activa de empleo</Badge></a
+        >
+      </h1>
+      <h2 class="text-2xl text-wrap">
+        <span>+3 años de experiencia</span>
+        <span class="opacity-80 text-yellow-200/90"
+          >en el sector del Data Analyst</span
+        >. Programador, Web Developer y Busines Intelligence Consultant.
+      </h2>
+
+      <nav class="flex gap-x-4 mt-6">
+        <SocialPill
+          href="https://www.linkedin.com/in/damian-martinez-cintas-1769bb198/"
+        >
+          <LinkedIn class="size-6" /> LinkedIn
+        </SocialPill>
+
+        <SocialPill href="https://github.com/damianm223">
+          <GithubIcon class="size-6" />
+           Github
+        </SocialPill>
+        <SocialPill href="https://github.com/damianm223">
+          <MailIcon class="size-4 md:size-6" />
+           damianm223@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center dark:text-white/80"
+      >
+        <ExperienceIcon
+         class="size-7" />
+         Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+
+    <SectionContainer id="educacion">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center dark:text-white/80"
+      >
+        <EducationIcon
+         class="size-7" />
+         Educación
+      </h2>
+      <Education />
+    </SectionContainer>
+
+    <SectionContainer id="contacto">
+      <h2
+        class="text-3xl font-semibold flex gap-x-3 items-center dark:text-white/80"
+      >
+        <PhoneIcon
+         class="size-7" />
+         Contacto
+      </h2>
+      <ContactForm />
+    </SectionContainer>
+  </main>
+</Layout>
