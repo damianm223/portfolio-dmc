@@ -16,14 +16,14 @@ const { title, description, link, date, skills, site,company } = Astro.props;
 >
 </div>
 <time
-  class="mb-1 text-sm font-normal leading-none text-sky-400 dark:text-sky-200/80"
+  class="mb-1 text-sm font-normal leading-none text-sky-400"
   >{date}</time
 >
 <h3 class="text-lg font-semibold text-yellow-200 mt-2">
   {title}
 </h3>
 <div >&nbsp;<small class="underline">{company}</small></div>
-<p class="mb-4 text-base font-normal dark:text-gray-200 text-pretty">
+<p class="mb-4 text-base font-normal text-pretty">
     {description.map((desc: string, index: number) => (
       <span>&#x2022; {desc} <br/> <br/></span>
     ))}
@@ -35,7 +35,7 @@ const { title, description, link, date, skills, site,company } = Astro.props;
     <a
       href={link}
       class="bg-white/5 
-    border dark:border-white/10 border-gray-300
+    border 
     rounded-full
     inline-flex justify-center items-center gap-x-2
     py-1 px-2 md:py-2 md:px-4
@@ -71,7 +71,6 @@ const { title, description, link, date, skills, site,company } = Astro.props;
       border  border-gray-400 rounded-full
       flex justify-center items-center gap-x-2
       py-1 px-2 md:py-2 md:px-4
-       dark:text-white/50
     `}>
     {skills.map((sk: string, index: number) => (
         <span> {sk} </span>
